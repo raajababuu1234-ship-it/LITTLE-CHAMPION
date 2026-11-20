@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>FullScreen</key>
+            <true/>
+            <key>Icon</key>
+            <data>
+iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAB5klEQVR4nO3SIQEAIADAMKAW7QiNpgO3m7/73OcO+LW+SzAQlYFIDERiIBIDkRiIxEAkBiIxEImBSAxEYiASA5EYiMRAJAYiMRCJgUgMRGIgEgORGIjEQCQGIjEQiYFIDERiIBIDkRiIxEAkBiIxEImBSAxEYiASA5EYiMRAJAYiMRCJgUgMRGIgEgORGIjEQCQGIjEQiYFIDERiIBIDkRiIxEAkBiIxEImBSAxEYiASA5EYiMRAJAYiMRCJgUgMRGIgEgORGIjEQCQGIjEQiYFIDERiIBIDkRiIxEAkBiIxEImBSAxEYiASA5EYiMRAJAYiMRCJgUgMRGIgEgORGIjEQCQGIjEQiYFIDERiIBIDkRiIxEAkBiIxEImBSAxEYiASA5EYiMRAJAYiMRCJgUgMRGIgEgORGIjEQCQGIjEQiYFIDERiIBIDkRiIxEAkBiIxEImBSAxEYiASA5EYiMRAJAYiMRCJgUgMRGIgEgORGIjEQCQGIjEQiYFIDERiIBIDkRiIxEAkBiIxEImBSAxEYiASA5EYiMRAJAYiMRCJgUgMRGIgEgORGIjEQCQGIjEQiYFIDERiIBIDkRiIxEAkBiIxEImBSAxEYiASA5EYiMRAJAYiMRCJgUgMRGIgEgORGIhRPNEKAzNDw8xaAAAAAElFTkSuQmCC
+            </data>
+            <key>IsRemovable</key>
+            <true/>
+            <key>Label</key>
+            <string>Little Champions</string>
+            <key>PayloadDescription</key>
+            <string>Installs Little Champions App on iOS Home Screen</string>
+            <key>PayloadDisplayName</key>
+            <string>Little Champions</string>
+            <key>PayloadIdentifier</key>
+            <string>com.littlechampions.app.webclip</string>
+            <key>PayloadType</key>
+            <string>com.apple.webClip.managed</string>
+            <key>PayloadUUID</key>
+            <string>9F482F62-95E0-4D88-B981-698C3E9A55B2</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>Precomposed</key>
+            <true/>
+            <key>URL</key>
+            <string>http://192.168.1.110:8000</string>
+        </dict>
+    </array>
+    <key>PayloadDescription</key>
+    <string>Little Champions Educational App for iPhone and iPad</string>
+    <key>PayloadDisplayName</key>
+    <string>Little Champions iOS App</string>
+    <key>PayloadIdentifier</key>
+    <string>com.littlechampions.app</string>
+    <key>PayloadOrganization</key>
+    <string>Little Champions</string>
+    <key>PayloadRemovalDisallowed</key>
+    <false/>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>4B6E1D91-2E9C-4A51-B88D-5A8E9A5F12C3</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>

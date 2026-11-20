@@ -1,0 +1,134 @@
+{
+  "poems": [
+    {
+      "id": "poem_custom_1",
+      "title": "Five Little Monkeys",
+      "hi_title": "पाँच नटखट बंदर",
+      "lang": "en",
+      "category": "Action Rhyme",
+      "icon": "🐒",
+      "bg": "linear-gradient(135deg, #10b981, #047857)",
+      "tuneMood": "playful",
+      "lines": [
+        "Five little monkeys jumping on the bed,",
+        "One fell off and bumped his head!",
+        "Mama called the doctor and the doctor said,",
+        "No more monkeys jumping on the bed!"
+      ]
+    },
+    {
+      "id": "poem_custom_2",
+      "title": "तितली उड़ी बस पर चढ़ी",
+      "hi_title": "रंग-बिरंगी तितली",
+      "lang": "hi",
+      "category": "Hindi Kavita",
+      "icon": "🦋",
+      "bg": "linear-gradient(135deg, #0f172a, #1e3a8a)",
+      "tuneMood": "happy",
+      "lines": [
+        "तितली उड़ी बस पर चढ़ी,",
+        "सीट ना मिली तो रोने लगी!",
+        "ड्राइवर ने बोला आजा मेरे पास,",
+        "तितली बोली ना बाबा ना, मेरा घर है पास!"
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "id": "course_solar_system",
+      "title": "Solar System & Space Wonders",
+      "hi_title": "हमारा सौरमंडल और अंतरिक्ष",
+      "subject": "science",
+      "grade": "all",
+      "icon": "🪐",
+      "color": "linear-gradient(135deg, #3b82f6, #1d4ed8)",
+      "description": "Explore the Sun, Earth, Moon, Mars, and planets in outer space!",
+      "cards": [
+        {
+          "word": "The Sun (सूर्य)",
+          "subtitle": "Center Star of our Solar System",
+          "emoji": "☀️",
+          "sentence": "The Sun is a giant, glowing ball of fire that gives us light, warmth, and life every single day!",
+          "spoken": "The Sun is the giant star at the center of our solar system. It gives us light and life!"
+        },
+        {
+          "word": "Planet Earth (पृथ्वी)",
+          "subtitle": "Our Beautiful Blue Home",
+          "emoji": "🌍",
+          "sentence": "Earth is our wonderful home planet, full of blue oceans, green trees, animals, and fresh air!",
+          "spoken": "Planet Earth is our home! It is the only planet known to have life, water, and trees."
+        },
+        {
+          "word": "The Moon (चंदा मामा)",
+          "subtitle": "Earth's Night Companion",
+          "emoji": "🌙",
+          "sentence": "The Moon orbits around Earth and lights up our night sky with its gentle silvery glow!",
+          "spoken": "The Moon is Earth's best friend in space, glowing softly in the night sky."
+        },
+        {
+          "word": "Mars (मंगल ग्रह)",
+          "subtitle": "The Red Planet",
+          "emoji": "🚀",
+          "sentence": "Mars is known as the Red Planet because of its iron-rich red dusty soil and giant volcanoes!",
+          "spoken": "Mars is the red planet! Scientists and rovers explore Mars to discover its secrets."
+        },
+        {
+          "word": "Jupiter (बृहस्पति)",
+          "subtitle": "The Giant King of Planets",
+          "emoji": "🪐",
+          "sentence": "Jupiter is the biggest planet in the solar system, so huge that all other planets could fit inside it!",
+          "spoken": "Jupiter is the giant king of planets, with huge swirling colorful storm clouds!"
+        }
+      ]
+    },
+    {
+      "id": "course_good_habits",
+      "title": "Good Habits & Golden Manners",
+      "hi_title": "अच्छी आदतें व शिष्टाचार",
+      "subject": "morals",
+      "grade": "nursery",
+      "icon": "🌟",
+      "color": "linear-gradient(135deg, #10b981, #059669)",
+      "description": "Essential daily habits, golden magic words, and health routines for smart champions!",
+      "cards": [
+        {
+          "word": "Brush Twice Daily 🪥",
+          "subtitle": "Morning and Night Care",
+          "emoji": "🦷",
+          "sentence": "Brush your teeth in the morning and before bed to keep germs away and smile brightly!",
+          "spoken": "Always brush your teeth twice every day for strong, shining, healthy white teeth!"
+        },
+        {
+          "word": "Wash Hands with Soap 🧼",
+          "subtitle": "Hygiene and Health",
+          "emoji": "🧴",
+          "sentence": "Wash your hands with soap and water for 20 seconds before eating and after playing!",
+          "spoken": "Wash your hands clean with soap before eating any meal to stay strong and healthy."
+        },
+        {
+          "word": "Magic Words: Please & Thank You ✨",
+          "subtitle": "Golden Courtesy",
+          "emoji": "🤝",
+          "sentence": "Say 'Please' when asking for something, and 'Thank You' when someone helps you!",
+          "spoken": "Use magic words! Say Please when you ask, and Thank You with a warm smile!"
+        },
+        {
+          "word": "Early to Bed, Early to Rise ⏰",
+          "subtitle": "Healthy Sleep Routine",
+          "emoji": "🌅",
+          "sentence": "Sleeping early and waking up with the sunrise makes you healthy, wealthy, and wise!",
+          "spoken": "Early to bed and early to rise makes a child healthy, happy, and super smart!"
+        }
+      ]
+    }
+  ],
+  "voiceSettings": {
+    "engine": "natural",
+    "persona": "sweet",
+    "pitch": 1.12,
+    "rate": 0.88,
+    "elevenLabsApiKey": "",
+    "elevenLabsVoiceId": "EXAVITQu4vr4xnSDxMaL",
+    "elevenLabsModelId": "eleven_multilingual_v2"
+  }
+}

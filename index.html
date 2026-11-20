@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#38bdf8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Little Champions: Play & Learn - Comprehensive educational game for Nursery to Class 5 kids with English, Hindi, and Mathematics.">
+  <title>🌟 Little Champions: Play & Learn (छोटे उस्ताद)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <!-- Dynamic Creative Study Background with Animated Scholastic Doodles -->
+  <div class="scholastic-floating-bg" aria-hidden="true">
+    <span class="doodle doodle-1">📚</span>
+    <span class="doodle doodle-2">✏️</span>
+    <span class="doodle doodle-3">🎓</span>
+    <span class="doodle doodle-4">⚛️</span>
+    <span class="doodle doodle-5">📐</span>
+    <span class="doodle doodle-6">⭐</span>
+    <span class="doodle doodle-7">💡</span>
+    <span class="doodle doodle-8">🎨</span>
+    <span class="doodle doodle-9">🚀</span>
+    <span class="doodle doodle-10">📖</span>
+    <span class="doodle doodle-11">➕</span>
+    <span class="doodle doodle-12">✖️</span>
+    <span class="doodle doodle-13">🔬</span>
+    <span class="doodle doodle-14">✈️</span>
+  </div>
+
+  <!-- ============================================================
+       TOP HEADER BAR
+       ============================================================ -->
+  <header class="app-header">
+    <div class="brand" id="btnHomeBrand" style="cursor:pointer;" title="Go to Home Screen">
+      <span class="brand-icon">🌟</span>
+      <div class="brand-text">
+        <h1>Little Champions</h1>
+        <p>छोटे उस्ताद • Play & Learn</p>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <!-- Kid Profile Pill (Click to change student avatar/class) -->
+      <div class="profile-pill" id="headerProfilePill" title="Change Student Avatar & Profile">
+        <span class="profile-avatar" id="headerKidAvatar">🧑‍🎓</span>
+        <span id="headerKidName">Champion</span>
+        <span class="profile-grade-tag" id="headerKidClassTag">Class 2</span>
+      </div>
+
+      <!-- Voice Selector Pill (Female / Male toggle) -->
+      <button class="voice-pill" id="btnVoiceToggle" title="Toggle Female / Male Voice">
+        <span id="headerVoiceIcon">👧</span>
+        <span id="headerVoiceText">Voice: Female</span>
+      </button>
+
+      <!-- Star Counter Badge -->
+      <div class="stars-pill" title="Stars Earned">
+        <span>⭐</span>
+        <span id="headerKidStars">0</span>
+      </div>
+
+      <!-- Sound Toggle -->
+      <button class="btn-icon" id="btnSoundToggle" aria-label="Toggle Sound" title="Sound On/Off">🔊</button>
+
+      <!-- Admin Studio Button -->
+      <button class="btn-icon" id="btnAdminStudio" title="Admin Studio: Add Courses & Voice" style="background:#fef3c7; border-color:#f59e0b;">⚙️</button>
+
+      <!-- Phone Connect Button -->
+      <button class="btn-icon" id="btnPhoneConnect" title="Play on Your Phone">📱</button>
+
+      <!-- Home Button -->
+      <button class="btn-icon active" id="btnHome" aria-label="Home" title="Home">🏠</button>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MAIN CONTENT CONTAINER
+       ============================================================ -->
+  <main class="main-content">
+
+    <!-- ----------------------------------------------------------
+         1. MAIN HOME SCREEN
+         ---------------------------------------------------------- -->
+    <section class="screen active" id="screenHome">
+      <div class="welcome-hero">
+        <!-- Student Companion Study Banner on Home -->
+        <div class="home-student-guide-card">
+          <div class="student-avatar-large" id="homeStudentAvatar">🧑‍🎓</div>
+          <div class="student-bubble-content">
+            <h2 class="tagline" style="margin:0;">Welcome, <span class="greeting-kid" id="heroKidName">Little Champion</span>! 🎒</h2>
+            <p class="subline" style="margin:4px 0 0 0;">"Ready to sharpen your brain today? Pick a study adventure and earn shiny stars! ⭐"</p>
+          </div>
+        </div>
+        
+        <!-- Class Filter Quick Tabs -->
+        <div class="class-filter-bar">
+          <button class="filter-tab active" data-filter="all">🌈 All Adventures</button>
+          <button class="filter-tab" data-filter="nursery">🐣 Nursery to Class 1</button>
+          <button class="filter-tab" data-filter="primary">🎓 Class 1 to Class 5</button>
+        </div>
+      </div>
+
+        <!-- Step-Wise Adventure Quest Roadmap -->
+        <div class="adventure-roadmap-card" id="adventureRoadmap">
+          <div class="roadmap-header">
+            <span class="roadmap-badge">🗺️ Step-by-Step Learning Quest (कदम-दर-कदम सफर)</span>
+            <h2 class="roadmap-title">5 Sharp Learning Levels for Students! 🏆</h2>
+            <p class="roadmap-sub">Study step-by-step from Nursery drawing to 1000+ Class 1-5 Brain Sharp Puzzles! ⭐</p>
+          </div>
+
+          <div class="roadmap-steps-row">
+            <!-- Step 1 -->
+            <div class="roadmap-step-pill" data-step="1" id="stepPill1">
+              <div class="step-num-badge">Step 1 • Nursery</div>
+              <div class="step-icon">🔤</div>
+              <div class="step-info">
+                <h4>Alphabets & वर्णमाला</h4>
+                <p>A-Z, अ से ज्ञ, Phonics & उच्चारण खेल</p>
+              </div>
+              <button class="btn-step-go" type="button" onclick="app.showScreen('screenAlphabetFlashcards')">Play Step 1 ▶</button>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="roadmap-step-pill" data-step="2" id="stepPill2">
+              <div class="step-num-badge">Step 2 • Nursery</div>
+              <div class="step-icon">🎨</div>
+              <div class="step-info">
+                <h4>Magic Painting Studio</h4>
+                <p>Drawing, 16 Colours & Cute Animal Outlines</p>
+              </div>
+              <button class="btn-step-go" type="button" onclick="app.openPaintingStudio()">Play Step 2 ▶</button>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="roadmap-step-pill" data-step="3" id="stepPill3">
+              <div class="step-num-badge">Step 3 • Class 1-3</div>
+              <div class="step-icon">✖️</div>
+              <div class="step-info">
+                <h4>Tables Master (1-20)</h4>
+                <p>Recite "Two ones are two" / "दो एकम दो"</p>
+              </div>
+              <button class="btn-step-go" type="button" onclick="app.openTablesExplorer()">Play Step 3 ▶</button>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="roadmap-step-pill" data-step="4" id="stepPill4">
+              <div class="step-num-badge">Step 4 • Class 1-5</div>
+              <div class="step-icon">✍️</div>
+              <div class="step-info">
+                <h4>Dictation Studio</h4>
+                <p>English Spellings & हिन्दी कठिन शब्द इमला</p>
+              </div>
+              <button class="btn-step-go" type="button" onclick="app.openDictationStudio()">Play Step 4 ▶</button>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="roadmap-step-pill" data-step="5" id="stepPill5">
+              <div class="step-num-badge">Step 5 • Class 1-5</div>
+              <div class="step-icon">🧠</div>
+              <div class="step-info">
+                <h4>1000+ Brain Sharp Arcade</h4>
+                <p>Math Prodigy, Science & Sharp Mind Puzzles</p>
+              </div>
+              <button class="btn-step-go" type="button" onclick="app.openBrainSharpArcade()">Play Step 5 ▶</button>
+            </div>
+          </div>
+        </div>
+
+      <!-- Central Colorful Hub Grid -->
+      <div class="hub-cards-grid" id="mainHubCardsGrid">
+
+        <!-- 1. Traditional Multiplication Tables (1 to 20) -->
+        <div class="hub-card primary-card" id="cardTablesHub" data-tier="primary">
+          <span class="hub-badge" style="background:#2563eb;">Multiplication Tables</span>
+          <div class="hub-icon">📖 ✖️ 🎧</div>
+          <h2 class="hub-title">Tables Explorer (1-20)<br><small style="font-size:0.9rem; color:#1d4ed8;">(पहाड़े १ से २० तक)</small></h2>
+          <p class="hub-desc">Traditional recitation: "Two ones are two, Two twos are four..." & हिन्दी पहाड़े ("दो एकम दो..."), audio repeat & quiz arcade!</p>
+          <button class="btn-play" type="button">Open Tables Explorer 🚀</button>
+        </div>
+
+        <!-- 2. English Alphabet -->
+        <div class="hub-card toddler-card" id="cardAlphabetHub" data-tier="nursery">
+          <span class="hub-badge" style="background:#0284c7;">Nursery - Class 1</span>
+          <div class="hub-icon">🔤 🍎 🎧</div>
+          <h2 class="hub-title">English Alphabet (A-Z)<br><small style="font-size:0.9rem; color:#0369a1;">(A for Apple to Z for Zebra)</small></h2>
+          <p class="hub-desc">Giant phonics flashcards, clear pronunciation, picture examples, and tap-to-learn audio for smart toddlers!</p>
+          <button class="btn-play" type="button">Learn Alphabet 🅰️</button>
+        </div>
+
+        <!-- 3. Hindi Varnamala -->
+        <div class="hub-card toddler-card" id="cardHindiHub" data-tier="nursery">
+          <span class="hub-badge" style="background:#ea580c;">हिन्दी भाषा</span>
+          <div class="hub-icon">🇮🇳 🕊️ 🌸</div>
+          <h2 class="hub-title">हिन्दी वर्णमाला<br><small style="font-size:0.9rem; color:#9a3412;">(स्वर १३ व व्यंजन ३६)</small></h2>
+          <p class="hub-desc">स्वर (अ से अः) व व्यंजन (क से ज्ञ) शुद्ध ध्वनि उच्चारण, सुंदर चित्रों व उदाहरणों के साथ सीखें!</p>
+          <button class="btn-play" type="button">वर्णमाला सीखें 🌸</button>
+        </div>
+
+        <!-- 4. Counting Safari 1-100 & Tens to 1000 -->
+        <div class="hub-card toddler-card" id="cardCountingHub" data-tier="nursery">
+          <span class="hub-badge" style="background:#16a34a;">Maths Basics</span>
+          <div class="hub-icon">🔢 🔟 🏆</div>
+          <h2 class="hub-title">1 to 100 Counting<br><small style="font-size:0.9rem; color:#15803d;">(& Tens up to 1000)</small></h2>
+          <p class="hub-desc">Count numbers from 1 to 100 with tap-to-count items, English & Hindi names, and tens values up to 1000!</p>
+          <button class="btn-play" type="button">Start Counting Safari 🎯</button>
+        </div>
+
+        <!-- 5. Colors, Shapes & Picture Recognition -->
+        <div class="hub-card toddler-card" id="cardColorsShapesHub" data-tier="nursery">
+          <span class="hub-badge" style="background:#d946ef;">Visual Learning</span>
+          <div class="hub-icon">🎨 🔺 🔷</div>
+          <h2 class="hub-title">Colours & Shapes<br><small style="font-size:0.9rem; color:#a21caf;">(रंग व आकृतियाँ पहचान)</small></h2>
+          <p class="hub-desc">Explore Red, Blue, Circle, Triangle, Star & Heart with interactive tap-to-learn and recognition quizzes!</p>
+          <button class="btn-play" type="button">Explore Colours & Shapes 🌈</button>
+        </div>
+
+        <!-- 6. Nursery Magic Painting & Coloring Studio (Replaced Poems) -->
+        <div class="hub-card toddler-card" id="cardPaintingHub" data-tier="nursery">
+          <span class="hub-badge" style="background:#ec4899;">Nursery Art Studio</span>
+          <div class="hub-icon">🎨 🖌️ 🌈</div>
+          <h2 class="hub-title">Magic Painting Studio<br><small style="font-size:0.9rem; color:#be185d;">(जादुई पेंटिंग व रंग भरो)</small></h2>
+          <p class="hub-desc">Draw with fingers, 16 vibrant colors, cute outline templates (Apple, Car, Kitten, Rocket, Star) and animal stamp stickers!</p>
+          <button class="btn-play" type="button">Open Magic Paint Studio 🎨</button>
+        </div>
+
+        <!-- 7. Open Dictation & Spelling Studio (Class 1 to 5) -->
+        <div class="hub-card primary-card" id="cardDictationHub" data-tier="primary">
+          <span class="hub-badge" style="background:#7c3aed;">Class 1 to 5</span>
+          <div class="hub-icon">✍️ 🎧 📚</div>
+          <h2 class="hub-title">Open Dictation Studio<br><small style="font-size:0.9rem; color:#6b21a8;">(English & Hindi Spellings)</small></h2>
+          <p class="hub-desc">Listen to difficult words for Class 1 to 5, learn how to pronounce them, practice typing/spelling, and get instant feedback!</p>
+          <button class="btn-play" type="button">Practice Dictation ✍️</button>
+        </div>
+
+        <!-- 8. Mathematics Arena (Enhanced & Bug-Free) -->
+        <div class="hub-card primary-card" id="cardMathHub" data-tier="primary">
+          <span class="hub-badge" style="background:#0891b2;">Class 1 to 5</span>
+          <div class="hub-icon">➕ ➖ ➗</div>
+          <h2 class="hub-title">Mathematics Arena<br><small style="font-size:0.9rem; color:#0e7490;">(Division, Find X, Fractions & LCM/HCF)</small></h2>
+          <p class="hub-desc">Addition, Subtraction, Division Safari, Find the Value of X, Fractions, Decimals, and LCM & HCF factor puzzles!</p>
+          <button class="btn-play" type="button">Enter Math Arena 🏆</button>
+        </div>
+
+        <!-- 9. General Knowledge & Brain Puzzles -->
+        <div class="hub-card primary-card" id="cardGkHub" data-tier="primary">
+          <span class="hub-badge" style="background:#f59e0b;">Brain Power</span>
+          <div class="hub-icon">🧠 💡 🌍</div>
+          <h2 class="hub-title">Brain Puzzles & GK<br><small style="font-size:0.9rem; color:#b45309;">(सामान्य ज्ञान व पहेलियाँ)</small></h2>
+          <p class="hub-desc">Fascinating India & World trivia, science facts, and fun riddles that improve thinking and problem-solving skills!</p>
+          <button class="btn-play" type="button">Solve Brain Puzzles 🧩</button>
+        </div>
+
+        <!-- 10. 1000+ Brain Sharp Arcade (Replaced Storytelling / History) -->
+        <div class="hub-card primary-card" id="cardBrainSharpHub" data-tier="primary">
+          <span class="hub-badge" style="background:#8b5cf6;">Class 1 to 5 • Brain Sharp</span>
+          <div class="hub-icon">🧠 ⚡ 🏆</div>
+          <h2 class="hub-title">1000+ Brain Sharp Arcade<br><small style="font-size:0.9rem; color:#6d28d9;">(दिमाग तेज़ करने वाली 1000+ पहेलियाँ)</small></h2>
+          <p class="hub-desc">Math Prodigy, Logical Reasoning, Science & Nature, and Word Power with 1000+ sharp student questions & IQ badges!</p>
+          <button class="btn-play" type="button">Play 1000+ Brain Sharp 🚀</button>
+        </div>
+
+        <!-- 11. Downloadable & Printable Worksheets -->
+        <div class="hub-card primary-card" id="cardWorksheetHub" data-tier="all">
+          <span class="hub-badge" style="background:#4f46e5;">Print & Download</span>
+          <div class="hub-icon">📄 🖨️ ✏️</div>
+          <h2 class="hub-title">Printable Worksheets<br><small style="font-size:0.9rem; color:#3730a3;">(Hindi, English & Mathematics)</small></h2>
+          <p class="hub-desc">Downloadable, clean printable practice worksheets with question exercises for home and school study!</p>
+          <button class="btn-play" type="button">Open Worksheets Center 📄</button>
+        </div>
+
+      </div>
+
+      <!-- Dynamic Custom Courses & Topics Section -->
+      <div class="custom-courses-section" id="homeCustomCoursesSection">
+        <div class="section-header-row">
+          <div>
+            <span class="hub-badge" style="background:#8b5cf6;">Extra Topics & Courses</span>
+            <h2 style="font-size:1.35rem; font-weight:900; color:#1e293b; margin-top:4px;">🌟 My Custom Courses & Topics (विशेष पाठ्यक्रम)</h2>
+            <p style="font-size:0.9rem; color:#64748b;">Added from Admin Studio — Tap any course to open flashcards and hear narration!</p>
+          </div>
+          <button class="btn-step-go" type="button" style="background:#8b5cf6;" onclick="app.openAdminStudio('tabCourses')">➕ Add Topic / Course</button>
+        </div>
+        <div class="custom-courses-grid" id="customCoursesGrid"></div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------
+         2. MULTIPLICATION TABLES EXPLORER SCREEN (1 TO 20)
+         ---------------------------------------------------------- -->
+    <section class="screen" id="screenTablesExplorer">
+      <div class="sub-nav">
+        <button class="btn-back" type="button" onclick="app.showScreen('screenHome')">◀ Home</button>
+        <h2 class="sub-title">📖 Multiplication Tables (1 to 20)</h2>
+      </div>
+
+      <!-- Student Study Companion Banner -->
+      <div class="student-study-banner">
+        <div class="student-avatar-badge">🧑‍🎓</div>
+        <div class="student-speech-bubble">
+          <strong>Rohan (Math Master):</strong> "Multiplication is just super-fast repeated addition! Tap any table number to recite together in English or हिन्दी!" 📐✨
+        </div>
+      </div>
+
+      <div class="tables-control-panel">
+        <div class="table-lang-switch">
+          <button class="btn-pill-toggle active" id="btnTableLangEn" type="button">English: "Two ones are two"</button>
+          <button class="btn-pill-toggle" id="btnTableLangHi" type="button">हिन्दी: "दो एकम दो"</button>
+        </div>
+
+        <div class="table-selector-bar" id="tableSelectorBar"></div>
+
+        <div class="table-action-btns">
+          <button class="btn-nav btn-speak" id="btnReciteWholeTable" type="button">
+            🔊 Recite Table (Traditional Audio)
+          </button>
+          <button class="btn-nav btn-next" id="btnStopTableRecite" style="display:none; background:#ef4444;" type="button">
+            ⏹️ Stop
+          </button>
+          <button class="btn-nav" id="btnTableQuizMode" style="background:#8b5cf6; color:#fff;" type="button">
+            🎯 Table Quiz Game
+          </button>
+        </div>
+      </div>
+
+      <div class="table-rows-container" id="tableRowsContainer"></div>
+      <div class="math-tip-box" id="tableTrickText" style="max-width:540px; margin:14px auto;"></div>
+    </section>
+
+    <!-- ----------------------------------------------------------
+         3. ENGLISH ALPHABET FLASHCARDS SCREEN
+         ---------------------------------------------------------- -->
+    <section class="screen" id="screenAlphabetFlashcards">
+      <div class="sub-nav">
+        <button class="btn-back" type="button" onclick="app.showScreen('screenHome')">◀ Back</button>
+        <h2 class="sub-title">🔤 Alphabet Flashcards (A-Z)</h2>
+      </div>
+
+      <!-- Student Study Companion Banner -->
+      <div class="student-study-banner">
+        <div class="student-avatar-badge">👧</div>
+        <div class="student-speech-bubble">
+          <strong>Ananya (Alphabet Champ):</strong> "Phonics power! Tap on the card to hear the crystal-clear phonics pronunciation and sentence!" 🔤🌟
+        </div>
+      </div>
+
+      <div class="game-card-wrapper">
+        <div class="flashcard-display" id="alphabetFlashcard" onclick="app.speakCurrentAlphabet()">
+          <div class="card-giant-letter" id="alphaGiant">A a</div>
+          <div class="card-emoji" id="alphaEmoji">🍎</div>
+          <div class="card-word" id="alphaWord">Apple</div>
+          <div class="card-sentence" id="alphaSentence">A is for Apple! Crisp and sweet.</div>
+        </div>
+
+        <div class="flashcard-nav">
+          <button class="btn-nav btn-prev" id="btnAlphaPrev" type="button">◀ Previous</button>
+          <button class="btn-nav btn-speak" id="btnAlphaSpeak" type="button">🔊 Speak</button>
+          <button class="btn-nav btn-next" id="btnAlphaNext" type="button">Next ▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------
+         5. HINDI VARNAMALA SCREEN
+         ---------------------------------------------------------- -->
+    <section class="screen" id="screenHindiVarnamala">
+      <div class="sub-nav">
+        <button class="btn-back" type="button" onclick="app.showScreen('screenHome')">◀ Back</button>
+        <h2 class="sub-title">🇮🇳 हिन्दी वर्णमाला व उच्चारण खेल</h2>
+      </div>
+
+      <!-- Student Study Companion Banner -->
+      <div class="student-study-banner">
+        <div class="student-avatar-badge">🧒</div>
+        <div class="student-speech-bubble">
+          <strong>अमित (हिन्दी मित्र):</strong> "स्वर और व्यंजन हमारी भाषा की नींव हैं! कार्ड पर टैप करके शुद्ध उच्चारण सुनिए और खेल खेलिए!" 📖🌸
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:center; gap:10px; margin-bottom:14px; flex-wrap:wrap;">
+        <button class="btn-pill-toggle active" id="btnHindiSwar" style="min-width:120px;" type="button">स्वर (१३)</button>
+        <button class="btn-pill-toggle" id="btnHindiVyanjan" style="min-width:120px;" type="button">व्यंजन (३६)</button>
+        <button class="btn-pill-toggle" id="btnHindiPronounceGameTab" style="min-width:180px; background:#f59e0b; color:#fff;" type="button">🎮 उच्चारण खेल (Sound Game)</button>
+      </div>
+
+      <!-- Mode 1: Varnamala Flashcards -->
+      <div class="game-card-wrapper" id="viewHindiFlashcards">
+        <div class="flashcard-display" id="hindiFlashcard" onclick="app.speakCurrentHindi()" title="Click to hear pronunciation">
+          <div class="card-giant-letter" id="hindiGiantLetter">अ</div>
+          <div class="card-emoji" id="hindiEmoji">🍎</div>
+          <div class="card-word" id="hindiWord">अ से अनार</div>
+          <div class="card-sentence" id="hindiPhonics">Aa se Anaar</div>
+        </div>
+
+        <div class="flashcard-nav">
+          <button class="btn-nav btn-prev" id="btnHindiPrev" type="button">◀ पिछला</button>
+          <button class="btn-nav btn-speak" id="btnHindiSpeak" type="button">🔊 उच्चारण</button>
+          <button class="btn-nav btn-next" id="btnHindiNext" type="button">अगला ▶</button>
+        </div>
+      </div>
+
+      <!-- Mode 2: Hindi Pronunciation & Letter Recognition Game -->
+      <div class="quiz-box" id="viewHindiPronounceGame" style="display:none; max-width:620px; margin:0 auto;">
+        <div style="text-align:center; margin-bottom:16px;">
+          <button class="btn-dictation-listen" id="btnHindiPronounceListen" type="button" style="font-size:1.15rem; padding:12px 24px;">
+            🔊 ध्वनि सुनो (Listen Sound)
+          </button>
+          <p style="margin-top:10px; font-weight:800; color:#1e293b; font-size:1.25rem;" id="hindiPronouncePrompt">
+            कबूतर वाला 'क' पहचानो!
+          </p>
+        </div>
+
+        <div class="grid-options" id="hindiPronounceOptionsBox" style="display:grid; grid-template-columns:1fr 1fr; gap:14px;"></div>
+
+        <div class="sad-feedback-banner"></div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------
+         6. COUNTING SAFARI (1 TO 100 & TENS TO 1000)
+         ---------------------------------------------------------- -->
+    <section class="screen" id="screenCountingSafari">
+      <div class="sub-nav">
+        <button class="btn-back" type="button" onclick="app.showScreen('screenHome')">◀ Back</button>
+        <h2 class="sub-title">🔢 1 to 100 Counting & Tens to 1000</h2>
+      </div>
+
+      <!-- Student Study Companion Banner -->
+      <div class="student-study-banner">
+        <div class="student-avatar-badge">🦁</div>
+        <div class="student-speech-bubble">
+          <strong>Leo & Kabir (Safari Counters):</strong> "Numbers are magical! Tap each cute object to count along 1 by 1 or jump in tens up to 1000!" 🎯🧮
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:center; gap:10px; margin-bottom:12px;">
+        <button class="btn-pill-toggle active" id="btnCountMode1to100" type="button">Counting 1 to 100</button>
+        <button class="btn-pill-toggle" id="btnCountModeTens" type="button">Tens to 1000 (10, 20... 1000)</button>
+      </div>
+
+      <div class="game-card-wrapper" style="text-align:center;">
+        <div style="font-size:4rem; font-weight:900; color:#2563eb; line-height:1;" id="countNumberGiant">1</div>
+        <div style="font-size:1.35rem; font-weight:800; color:#475569; margin-bottom:12px;" id="countWords">One • एक</div>
+
+        <div class="visual-items-shelf" id="countingItemsShelf" style="min-height:90px;"></div>
+        <p style="font-size:0.85rem; color:#64748b; margin-bottom:16px;">👉 Tap any item to count aloud!</p>
+
+        <div class="flashcard-nav">
+          <button class="btn-nav btn-prev" id="btnCountPrev" type="button">◀ Previous</button>
+          <button class="btn-nav btn-speak" id="btnCountSpeak" type="button">🔊 Speak Number</button>
+          <button class="btn-nav btn-next" id="btnCountNext" type="button">Next ▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------
+         7. COLOURS & SHAPES RECOGNITION SCREEN
+         ---------------------------------------------------------- -->
+    <section class="screen" id="screenColorsShapes">
+      <div class="sub-nav">
+        <button class="btn-back" type="button" onclick="app.showScreen('screenHome')">◀ Back</button>
+        <h2 class="sub-title">🎨 Colours & Shapes Recognition</h2>
+      </div>
+
+      <!-- Student Study Companion Banner -->
+      <div class="student-study-banner">
+        <div class="student-avatar-badge">👧</div>
+        <div class="student-speech-bubble">
+          <strong>Priya (Little Explorer):</strong> "Shapes and colours make our world beautiful! Tap any color or geometric shape to hear its story!" 🌈🔷
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:center; gap:10px; margin-bottom:14px;">
+        <button class="btn-pill-toggle active" id="btnTabColors" type="button">🌈 Colours (रंग)</button>
+        <button class="btn-pill-toggle" id="btnTabShapes" type="button">📐 Shapes (आकृतियाँ)</button>
+      </div>
+
+      <!-- Colors Explorer View -->
+      <div id="viewColorsContainer">
+        <div class="color-palette-grid" id="colorPaletteGrid"></div>
+      </div>
+
+      <!-- Shapes Explorer View -->
+      <div id="viewShapesContainer" style="display:none;">
+        <div class="shapes-cards-grid" id="shapesCardsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------
+         6. NURSERY MAGIC PAINTING & COLORING STUDIO
+         ---------------------------------------------------------- -->
+    <section class="screen" id="screenPaintingStudio">
+      <div class="sub-nav">
+        <button class="btn-back" type="button" onclick="app.showScreen('screenHome')">◀ Back</button>
+        <h2 class="sub-title">🎨 Magic Painting & Coloring Studio (जादुई पेंटिंग)</h2>
+      </div>
+
+      <!-- Student Study Companion Banner -->
+      <div class="student-study-banner">
+        <div class="student-avatar-badge" id="studentAvatarPaint">🎨</div>
+        <div class="student-speech-bubble" id="studentSpeechPaint">
+          <strong>Hello Little Artist!</strong> Pick an outline like Apple or Car, or use a blank sheet. Choose bright colours and paint your masterpiece! 🖌️✨
+        </div>
+      </div>
+
+      <div class="painting-studio-wrap">
+        <!-- Outlines Selection Bar -->
+        <div class="painting-templates-bar" id="paintingTemplatesBar"></div>
+
+        <!-- Canvas Frame -->
+        <div class="paint-canvas-frame">
+          <canvas id="paintCanvas" width="700" height="420"></canvas>
+        </div>
+
+        <!-- Color Palette & Tools Bar -->
+        <div class="paint-controls-panel">
+          <div class="palette-colors-row" id="paintColorPalette"></div>
+
+          <div class="paint-tools-row">
+            <div class="brush-sizes-group">
+              <span style="font-size:0.85rem; font-weight:800; color:#475569;">Brush:</span>
+              <button class="btn-brush-size active" data-size="4" type="button" title="Pencil">✏️ Thin</button>
+              <button class="btn-brush-size" data-size="10" type="button" title="Marker">🖌️ Medium</button>
+              <button class="btn-brush-size" data-size="22" type="button" title="Crayon">🖍️ Thick</button>
+              <button class="btn-brush-size" data-size="42" type="button" title="Roller">🎨 Giant</button>
+            </div>
+
+            <div class="special-pens-group">
+              <button class="btn-special-tool" id="btnRainbowPen" type="button" title="Rainbow Magic Pen">🌈 Rainbow</button>
+              <button class="btn-special-tool" id="btnNeonPen" type="button" title="Neon Glow Pen">✨ Neon</button>
+              <button class="btn-special-tool" id="btnEraserTool" type="button" title="Eraser">🧼 Eraser</button>
+            </div>
+          </div>
+
+          <!-- Cute Animal & Reward Stamps Bar -->
+          <div class="stamps-section-wrap">
+            <span style="font-size:0.85rem; font-weight:800; color:#475569; margin-right:8px;">Fun Stamps:</span>
+            <div class="paint-stamps-bar" id="paintStampsBar"></div>
+          </div>
+
+          <!-- Canvas Action Buttons -->
+          <div class="paint-action-btns">
+            <button class="btn-paint-action" id="btnClearCanvas" type="button" style="background:#fee2e2; color:#dc2626;">🗑️ Clear Canvas</button>
+            <button class="btn-paint-action" id="btnUndoPaint" type="button" style="background:#fef3c7; color:#b45309;">↩️ Undo</button>
+            <button class="btn-paint-action" id="btnDownloadArt" type="button" style="background:#ecfdf5; color:#059669;">💾 Save Picture</button>
+            <button class="btn-paint-action" id="btnVoiceCheerPaint" type="button" style="background:#eff6ff; color:#2563eb;" onclick="app.cheerArtwork()">🗣️ Praise My Art!</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------
+         9. OPEN DICTATION & SPELLING STUDIO SCREEN (CLASS 1 TO 5)
+         ---------------------------------------------------------- -->
+    <section class="screen" id="screenDictation">
+      <div class="sub-nav">
+        <button class="btn-back" type="button" onclick="app.showScreen('screenHome')">◀ Back</button>
+        <h2 class="sub-title">✍️ Open Dictation & Spelling Studio</h2>
+      </div>
+
+      <!-- Student Study Companion Banner -->
+      <div class="student-study-banner">
+        <div class="student-avatar-badge">🧑‍🎓</div>
+        <div class="student-speech-bubble">
+          <strong>Aarav (Spelling Bee Champion):</strong> "Listen carefully to the audio sentence, type each letter accurately, and boost your vocabulary score!" 📝🏆
+        </div>
+      </div>
+
+      <!-- Dictation Language Switcher -->
+      <div style="display:flex; justify-content:center; gap:10px; margin-bottom:12px;">
+        <button class="btn-pill-toggle active" id="btnDictLangEn" type="button">🇬🇧 English Spellings</button>
+        <button class="btn-pill-toggle" id="btnDictLangHi" type="button">🇮🇳 हिन्दी इमला (Hindi Dictation)</button>
+      </div>
+
+      <div class="dictation-class-bar" id="dictationClassBar">
+        <button class="btn-pill-toggle active" data-grade="Class 1">Class 1</button>
+        <button class="btn-pill-toggle" data-grade="Class 2">Class 2</button>
+        <button class="btn-pill-toggle" data-grade="Class 3">Class 3</button>
+        <button class="btn-pill-toggle" data-grade="Class 4">Class 4</button>
+        <button class="btn-pill-toggle" data-grade="Class 5">Class 5</button>
+      </div>
+
+      <div class="quiz-box">
+        <div style="display:flex; justify-content:center; align-items:center; gap:12px; margin-bottom:12px;">
+          <button class="btn-dictation-listen" id="btnDictationListen" type="button">
+            🔊 Listen to Word
+          </button>
+          <span style="font-size:0.9rem; color:#64748b;">(Tap to hear pronunciation)</span>
+        </div>
+
+        <p class="dictation-sentence" id="dictationSentence">"We must drink clean water every day."</p>
+
+        <div class="dictation-input-wrap">
+          <input type="text" id="inputDictationWord" class="dictation-input" placeholder="Type the spelling here..." autocomplete="off">
+          <button class="btn-check-dictation" id="btnCheckDictation" type="button">Check Spelling 🚀</button>
+        </div>
+
+        <div class="dictation-tip-box" id="dictationTipBox">
+          <p>💡 <span id="dictationTipText">Spelling Hint will appear here</span></p>
+        </div>
+
+        <div class="sad-feedback-banner"></div>
+
+        <div style="display:flex; justify-content:space-between; margin-top:14px;">
+          <button class="btn-nav btn-prev" id="btnDictationPrev" type="button">◀ Previous Word</button>
+          <button class="btn-nav btn-next" id="btnDictationNext" type="button">Next Word ▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------
+         10. BRAIN PUZZLES & GENERAL KNOWLEDGE SCREEN
+         ---------------------------------------------------------- -->
+    <section class="screen" id="screenGkPuzzles">
+      <div class="sub-nav">
+        <button class="btn-back" type="button" onclick="app.showScreen('screenHome')">◀ Back</button>
+        <h2 class="sub-title">🧠 Brain Puzzles & General Knowledge</h2>
+      </div>
+
+      <!-- Student Study Companion Banner -->
+      <div class="student-study-banner">
+        <div class="student-avatar-badge">💡</div>
+        <div class="student-speech-bubble">
+          <strong>Diya (Quiz Whiz):</strong> "Curiosity is the key to knowledge! Solve fascinating riddles and discover amazing facts about India and the universe!" 🌍✨
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:center; gap:10px; margin-bottom:14px;">
+        <button class="btn-pill-toggle active" id="btnTabGk" type="button">🌍 General Knowledge</button>
+        <button class="btn-pill-toggle" id="btnTabRiddles" type="button">🧩 Brain Riddles</button>
+      </div>
+
+      <!-- GK Container -->
+      <div class="quiz-box" id="viewGkContainer">
+        <span class="gk-icon" id="gkIcon">🐅</span>
+        <div class="quiz-prompt" id="gkQuestionText">What is the National Animal of India?</div>
+        <p class="quiz-subprompt" id="gkSubText">भारत का राष्ट्रीय पशु कौन सा है?</p>
+
+        <div class="options-grid" id="gkOptionsGrid"></div>
+        <div class="sad-feedback-banner"></div>
+      </div>
+
+      <!-- Riddles Container -->
+      <div class="quiz-box" id="viewRiddlesContainer" style="display:none;">
+        <span class="gk-icon">🤔</span>
+        <div class="quiz-prompt" id="riddleQuestionText">Riddle question</div>
+        <p class="quiz-subprompt" id="riddleSubText">पहेली</p>
+
+        <div class="options-grid" id="riddleOptionsGrid"></div>
+        <div class="sad-feedback-banner"></div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------
+         11. MATHEMATICS ARENA SCREEN
+         ---------------------------------------------------------- -->
+    <section class="screen" id="screenMathArena">
+      <div class="sub-nav">
+        <button class="btn-back" type="button" onclick="app.showScreen('screenHome')">◀ Back</button>
+        <h2 class="sub-title">➕ Mathematics Arena (All Classes)</h2>
+      </div>
+
+      <!-- Student Study Companion Banner -->
+      <div class="student-study-banner">
+        <div class="student-avatar-badge">🧑‍🏫</div>
+        <div class="student-speech-bubble">
+          <strong>Vikram (Math Wizard):</strong> "Math is fun when you visualize! Division, Multiplication, Fractions, LCM & Finding X made super simple!" ➕➗✨
+        </div>
+      </div>
+
+      <div class="math-modes-grid">
+        <button class="math-mode-pill active" id="pillMathDivision" type="button">➗ Division</button>
+        <button class="math-mode-pill" id="pillMathMult" type="button">✖️ Multiplication</button>
+        <button class="math-mode-pill" id="pillMathAddSub" type="button">➕ Addition & Subtraction</button>
+        <button class="math-mode-pill" id="pillMathFindX" type="button">📐 Find Value of X</button>
+        <button class="math-mode-pill" id="pillMathFractions" type="button">🍕 Fractions & Decimals</button>
+        <button class="math-mode-pill" id="pillMathLcmHcf" type="button">🔢 LCM & HCF</button>
+      </div>
+
+      <!-- Math Container dynamically populated -->
+      <div class="quiz-box" id="mathArenaPlayBox">
+        <div class="visual-equation" id="mathArenaEquation">Equation</div>
+        <p class="quiz-subprompt" id="mathArenaSubprompt">Subprompt</p>
+        <div class="visual-items-shelf" id="mathArenaShelf"></div>
+        <div class="math-tip-box" id="mathArenaTip" style="display:none;"></div>
+        <div class="options-grid" id="mathArenaOptionsGrid"></div>
+        <div class="sad-feedback-banner"></div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------
+         12. 1000+ BRAIN SHARP ARCADE (CLASS 1 - 5)
+         ---------------------------------------------------------- -->
+    <section class="screen" id="screenBrainSharp">
+      <div class="sub-nav">
+        <button class="btn-back" type="button" onclick="app.showScreen('screenHome')">◀ Back</button>
+        <h2 class="sub-title">🧠 1000+ Brain Sharp Arcade (Class 1 to 5)</h2>
+      </div>
+
+      <!-- Student Study Companion Banner -->
+      <div class="student-study-banner">
+        <div class="student-avatar-badge" id="studentAvatarBrain">🧑‍🎓</div>
+        <div class="student-speech-bubble" id="studentSpeechBrain">
+          <strong>Aryan (Class Topper):</strong> "Practice makes the brain sharp! With 1,000+ challenges in Math, Logic, Science, and GK, challenge yourself and level up your IQ!" 💡🚀
+        </div>
+      </div>
+
+      <!-- Class Selector Tabs -->
+      <div class="brain-class-tabs" id="brainClassTabs">
+        <button class="btn-pill-toggle active" data-class="Class 1" type="button">🎒 Class 1 (Age 5-6)</button>
+        <button class="btn-pill-toggle" data-class="Class 2" type="button">📘 Class 2 (Age 6-7)</button>
+        <button class="btn-pill-toggle" data-class="Class 3" type="button">📗 Class 3 (Age 7-8)</button>
+        <button class="btn-pill-toggle" data-class="Class 4" type="button">📙 Class 4 (Age 8-9)</button>
+        <button class="btn-pill-toggle" data-class="Class 5" type="button">🎓 Class 5 (Age 9-11)</button>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="brain-category-bar" id="brainCategoryBar">
+        <button class="btn-cat-chip active" data-cat="math" type="button">⚡ Math Prodigy</button>
+        <button class="btn-cat-chip" data-cat="logic" type="button">🧩 Logic & Puzzles</button>
+        <button class="btn-cat-chip" data-cat="science" type="button">🔬 Science & Nature</button>
+        <button class="btn-cat-chip" data-cat="words" type="button">📚 Word Power</button>
+        <button class="btn-cat-chip" data-cat="gk" type="button">🌍 India & World GK</button>
+      </div>
+
+      <!-- Brain Meter & Scorecard -->
+      <div class="brain-meter-card">
+        <div class="brain-stat-badge"><span class="stat-icon">🎯</span> Question: <strong id="brainQuestionCounter">1 / 1000+</strong></div>
+        <div class="brain-stat-badge"><span class="stat-icon">🔥</span> Streak: <strong id="brainStreakCount">0</strong></div>
+        <div class="brain-stat-badge"><span class="stat-icon">⭐</span> Brain Score: <strong id="brainScoreTotal">0</strong></div>
+        <div class="brain-stat-badge"><span class="stat-icon">🏆</span> Rank: <strong id="brainRankTitle">Curious Thinker</strong></div>
+      </div>
+
+      <!-- Brain Question Play Box -->
+      <div class="quiz-box brain-quiz-box" id="brainQuestionPlayBox">
+        <div class="brain-question-header">
+          <span class="brain-cat-badge" id="brainCatBadge">⚡ Math Prodigy</span>
+          <button class="btn-nav btn-speak" id="btnSpeakBrainQuestion" type="button" title="Listen to question">
+            🔊 Listen Question
+          </button>
+        </div>
+
+        <div class="quiz-prompt brain-prompt" id="brainQuestionPrompt">Question text will load here</div>
+        <p class="quiz-subprompt brain-subprompt" id="brainQuestionSubprompt">Hindi translation or contextual subtext</p>
+
+        <div class="visual-items-shelf" id="brainVisualShelf"></div>
+
+        <!-- 4 Options Grid -->
+        <div class="options-grid brain-options-grid" id="brainOptionsGrid"></div>
+
+        <!-- Hint and Clue Toggle -->
+        <div class="brain-hint-container">
+          <button class="btn-hint-toggle" id="btnToggleBrainHint" type="button">💡 Need a Clue / Hint?</button>
+          <div class="brain-hint-box" id="brainHintBox" style="display:none;"></div>
+        </div>
+
+        <!-- Explanation / Feedback Banner -->
+        <div class="brain-feedback-card" id="brainFeedbackCard" style="display:none;">
+          <div class="feedback-status" id="brainFeedbackStatus"></div>
+          <p class="feedback-explanation" id="brainFeedbackExplanation"></p>
+          <div style="margin-top:14px; text-align:center;">
+            <button class="btn-play" id="btnNextBrainQuestion" type="button" style="max-width:260px; margin:0 auto;">
+              Next Brain Question 🚀
+            </button>
+          </div>
+        </div>
+
+        <div class="sad-feedback-banner"></div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------
+         13. PRINTABLE WORKSHEETS CENTER
+         ---------------------------------------------------------- -->
+    <section class="screen" id="screenWorksheets">
+      <div class="sub-nav">
+        <button class="btn-back" type="button" onclick="app.showScreen('screenHome')">◀ Back</button>
+        <h2 class="sub-title">📄 Printable Practice Worksheets</h2>
+      </div>
+
+      <!-- Student Study Companion Banner -->
+      <div class="student-study-banner">
+        <div class="student-avatar-badge">🧑‍🎓</div>
+        <div class="student-speech-bubble">
+          <strong>Neha (Study Coach):</strong> "Print these fun worksheets or solve them on screen to prepare for class exams and tests!" 📝⭐
+        </div>
+      </div>
+
+      <div class="worksheets-selector-grid" id="worksheetsSelectorGrid"></div>
+
+      <div class="worksheet-paper-preview" id="worksheetPaperPreview">
+        <div class="worksheet-paper-header">
+          <div class="worksheet-school-title">🌟 Little Champions: Play & Learn School Worksheet 🌟</div>
+          <div class="worksheet-meta-row">
+            <span><strong>Student Name:</strong> <span id="wsStudentName">Aarav</span></span>
+            <span><strong>Class:</strong> <span id="wsStudentGrade">Class 2</span></span>
+            <span><strong>Date:</strong> ________________</span>
+            <span><strong>Score:</strong> ____ / 10 ⭐</span>
+          </div>
+        </div>
+
+        <h3 class="ws-sheet-title" id="wsSheetTitle">Multiplication Tables Practice Worksheet</h3>
+
+        <div class="ws-questions-list" id="wsQuestionsList"></div>
+
+        <div class="ws-print-actions no-print">
+          <button class="btn-play" style="max-width:240px; background:#10b981;" type="button" onclick="window.print()">
+            🖨️ Print / Save as PDF
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------
+         14. ADMIN STUDIO (MANAGE POEMS, COURSES & ELEVENLABS VOICE)
+         ---------------------------------------------------------- -->
+    <section class="screen" id="screenAdmin">
+      <div class="sub-nav">
+        <button class="btn-back" type="button" onclick="app.showScreen('screenHome')">◀ Home</button>
+        <h2 class="sub-title">🛠️ Admin & Teacher Studio (प्रबंधन कक्ष)</h2>
+      </div>
+
+      <!-- Admin Tab Navigation Bar -->
+      <div class="admin-tabs-bar">
+        <button class="admin-tab active" id="tabBtnAdminVoice" type="button" onclick="app.switchAdminTab('voice')">
+          🎙️ Voice & ElevenLabs
+        </button>
+        <button class="admin-tab" id="tabBtnAdminPoems" type="button" onclick="app.switchAdminTab('poems')">
+          📝 Poems & Rhymes (<span id="adminPoemCount">0</span>)
+        </button>
+        <button class="admin-tab" id="tabBtnAdminCourses" type="button" onclick="app.switchAdminTab('courses')">
+          📚 Courses & Topics (<span id="adminCourseCount">0</span>)
+        </button>
+        <button class="admin-tab" id="tabBtnAdminBackup" type="button" onclick="app.switchAdminTab('backup')">
+          💾 Backup & Sync
+        </button>
+      </div>
+
+      <!-- Tab 1: Voice & ElevenLabs Studio -->
+      <div class="admin-tab-content active" id="adminContentVoice">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <h3>🎙️ Narration & Speech Settings (ElevenLabs + Natural Browser Voice)</h3>
+            <p>Select your speech engine, configure ElevenLabs AI voice, or fine-tune character speech tone!</p>
+          </div>
+
+          <div class="admin-form-row">
+            <label class="admin-label">Voice Engine Mode:</label>
+            <div class="voice-engine-toggle">
+              <label class="engine-radio-label">
+                <input type="radio" name="voiceEngineRadio" value="natural" id="radioEngineNatural" checked onchange="app.onVoiceEngineChange()">
+                <span>🌟 High-Fidelity Natural Browser Voices (Zero API Cost, Offline Ready)</span>
+              </label>
+              <label class="engine-radio-label">
+                <input type="radio" name="voiceEngineRadio" value="elevenlabs" id="radioEngineElevenLabs" onchange="app.onVoiceEngineChange()">
+                <span>🤖 ElevenLabs AI Voice (Studio Quality Neural Narration)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- ElevenLabs Configuration Box -->
+          <div class="admin-settings-box" id="elevenLabsSettingsBox">
+            <h4 style="color:#2563eb; margin-bottom:10px;">🤖 ElevenLabs AI Configuration</h4>
+            <div class="form-group" style="margin-bottom:12px;">
+              <label for="inputElevenKey">ElevenLabs API Key:</label>
+              <div style="display:flex; gap:8px;">
+                <input type="password" id="inputElevenKey" class="form-input" placeholder="e.g. sk_xxxxxxxxxxxxxxxxxxxxxxxx" style="flex:1;">
+                <button type="button" class="btn-step-go" style="background:#64748b; padding:8px 14px;" onclick="app.toggleApiKeyVisibility()">👁️ Show/Hide</button>
+              </div>
+              <small style="color:#64748b; display:block; margin-top:4px;">Get your free API key at <a href="https://elevenlabs.io" target="_blank" style="color:#2563eb;">elevenlabs.io</a>.</small>
+            </div>
+
+            <div class="form-group" style="margin-bottom:12px;">
+              <label for="selectElevenVoice">ElevenLabs Voice Persona:</label>
+              <select id="selectElevenVoice" class="form-select">
+                <option value="EXAVITQu4vr4xnSDxMaL" selected>Bella - Sweet, cheerful, playful child-friendly voice (Recommended)</option>
+                <option value="21m00Tcm4TlvDq8ikWAM">Rachel - Warm, calm, gentle storytelling voice</option>
+                <option value="pNInz6obpgDQGcFmaJgB">Adam - Friendly, deep, enthusiastic teacher</option>
+                <option value="jsCqWAovK2LkecY7zXl4">Freya - Energetic, lively young female voice</option>
+                <option value="IKne3meq5aSn9X80BHx2">Charlie - Natural, playful teen narrator</option>
+                <option value="custom">✏️ Enter Custom Voice ID below...</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="groupCustomVoiceId" style="display:none; margin-bottom:12px;">
+              <label for="inputCustomVoiceId">Custom ElevenLabs Voice ID:</label>
+              <input type="text" id="inputCustomVoiceId" class="form-input" placeholder="e.g. 21m00Tcm4TlvDq8ikWAM">
+            </div>
+
+            <div class="form-group" style="margin-bottom:12px;">
+              <label for="selectElevenModel">AI Speech Model:</label>
+              <select id="selectElevenModel" class="form-select">
+                <option value="eleven_multilingual_v2" selected>eleven_multilingual_v2 (Best for English, Hindi, & traditional tables)</option>
+                <option value="eleven_turbo_v2_5">eleven_turbo_v2_5 (Fastest response speed)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Natural Browser Tuning Box -->
+          <div class="admin-settings-box" id="browserVoiceSettingsBox">
+            <h4 style="color:#059669; margin-bottom:10px;">🌟 Browser Voice Tuning & Character Personas</h4>
+            <div class="form-group" style="margin-bottom:12px;">
+              <label for="selectVoicePersona">Speaking Character Persona:</label>
+              <select id="selectVoicePersona" class="form-select" onchange="app.onPersonaChange()">
+                <option value="sweet" selected>🧸 Sweet Storyteller (Cheerful & warm child tone)</option>
+                <option value="friendly">👩‍🏫 Friendly School Teacher (Clear, encouraging, crisp articulation)</option>
+                <option value="cartoon">🎨 Animated Cartoon Character (Playful & energetic bouncy pitch)</option>
+                <option value="gentle">📖 Calm Bedtime Narrator (Smooth, gentle & soothing pace)</option>
+              </select>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+              <div class="form-group">
+                <label>Pitch: <span id="labelPitchVal" style="font-weight:bold; color:#2563eb;">1.12</span></label>
+                <input type="range" id="sliderVoicePitch" min="0.6" max="1.6" step="0.02" value="1.12" class="form-range" oninput="document.getElementById('labelPitchVal').textContent=this.value">
+              </div>
+              <div class="form-group">
+                <label>Speed (Pace): <span id="labelRateVal" style="font-weight:bold; color:#2563eb;">0.88</span></label>
+                <input type="range" id="sliderVoiceRate" min="0.6" max="1.4" step="0.02" value="0.88" class="form-range" oninput="document.getElementById('labelRateVal').textContent=this.value">
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Voice Tester -->
+          <div class="voice-tester-box">
+            <label style="font-weight:bold; display:block; margin-bottom:6px;">Test Narration Voice:</label>
+            <div style="display:flex; gap:10px;">
+              <input type="text" id="inputTestPhrase" class="form-input" value="Hello Little Champion! Today we are learning something super exciting!" style="flex:1;">
+              <button type="button" class="btn-play" style="padding:10px 20px; background:#10b981;" onclick="app.testVoiceNarration()">
+                ▶️ Test Voice
+              </button>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:flex-end; margin-top:16px;">
+            <button type="button" class="btn-start-game" style="max-width:240px; margin:0;" onclick="app.saveVoiceConfig()">
+              💾 Save Voice Settings
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Poems & Rhymes Manager -->
+      <div class="admin-tab-content" id="adminContentPoems">
+        <div class="admin-card">
+          <div class="admin-card-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+            <div>
+              <h3>📝 Rhymes, Poems & Kavita Library</h3>
+              <p>Add new rhymes, edit lines, or customize visual backgrounds & emoji icons!</p>
+            </div>
+            <button type="button" class="btn-step-go" style="background:#10b981; padding:10px 18px;" onclick="app.openPoemForm()">
+              ➕ Add New Poem
+            </button>
+          </div>
+
+          <!-- Poem Form (Hidden by default, shown on click) -->
+          <div class="admin-form-panel" id="adminPoemFormPanel" style="display:none;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+              <h4 id="poemFormTitle" style="color:#2563eb; font-size:1.15rem;">➕ Add New Poem</h4>
+              <button type="button" class="btn-close-modal" style="position:static;" onclick="app.closePoemForm()">✕</button>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+              <div class="form-group">
+                <label for="poemInputTitle">Poem Title (English):</label>
+                <input type="text" id="poemInputTitle" class="form-input" placeholder="e.g. Five Little Monkeys">
+              </div>
+              <div class="form-group">
+                <label for="poemInputHiTitle">Hindi Title / Subtitle:</label>
+                <input type="text" id="poemInputHiTitle" class="form-input" placeholder="e.g. पाँच नटखट बंदर">
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-top:8px;">
+              <div class="form-group">
+                <label for="poemSelectLang">Language:</label>
+                <select id="poemSelectLang" class="form-select">
+                  <option value="en" selected>English</option>
+                  <option value="hi">हिन्दी (Hindi)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="poemInputCategory">Category:</label>
+                <input type="text" id="poemInputCategory" class="form-input" placeholder="e.g. Action Song / Rhyme">
+              </div>
+              <div class="form-group">
+                <label for="poemInputIcon">Emoji Icon:</label>
+                <input type="text" id="poemInputIcon" class="form-input" placeholder="e.g. 🐒" value="⭐">
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top:8px;">
+              <label for="poemSelectBg">Stage Background Theme:</label>
+              <select id="poemSelectBg" class="form-select">
+                <option value="linear-gradient(135deg, #0f172a, #1e3a8a)">Midnight Starry Blue (Twinkle Night)</option>
+                <option value="linear-gradient(135deg, #10b981, #047857)">Jungle Emerald Green (Playful & Fresh)</option>
+                <option value="linear-gradient(135deg, #f97316, #fbbf24)">Sunshine Sunrise Orange (Warm & Energetic)</option>
+                <option value="linear-gradient(135deg, #ec4899, #f43f5e)">Bubblegum Berry Pink (Joyful Sweet)</option>
+                <option value="linear-gradient(135deg, #8b5cf6, #6366f1)">Magic Purple Wonder (Dreamy & Fun)</option>
+                <option value="linear-gradient(135deg, #0284c7, #38bdf8)">Sky Lagoon Blue (Ocean Breeze)</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-top:8px;">
+              <label for="poemInputLines">Poem Lines (Type one line per row):</label>
+              <textarea id="poemInputLines" class="form-textarea" rows="6" placeholder="Five little monkeys jumping on the bed,&#10;One fell off and bumped his head!&#10;Mama called the doctor and the doctor said,&#10;No more monkeys jumping on the bed!"></textarea>
+            </div>
+
+            <input type="hidden" id="poemEditId" value="">
+
+            <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:14px;">
+              <button type="button" class="btn-step-go" style="background:#94a3b8;" onclick="app.closePoemForm()">Cancel</button>
+              <button type="button" class="btn-step-go" style="background:#10b981;" onclick="app.savePoem()">💾 Save Poem</button>
+            </div>
+          </div>
+
+          <!-- Poems List Grid -->
+          <div class="admin-items-list" id="adminPoemsList"></div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Courses & Topics Manager -->
+      <div class="admin-tab-content" id="adminContentCourses">
+        <div class="admin-card">
+          <div class="admin-card-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+            <div>
+              <h3>📚 Custom Courses & Extra Learning Topics</h3>
+              <p>Create new lessons on science, habits, animals, geography or math with interactive flashcards!</p>
+            </div>
+            <button type="button" class="btn-step-go" style="background:#8b5cf6; padding:10px 18px;" onclick="app.openCourseForm()">
+              ➕ Create New Course
+            </button>
+          </div>
+
+          <!-- Course Builder Form (Hidden by default) -->
+          <div class="admin-form-panel" id="adminCourseFormPanel" style="display:none;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+              <h4 id="courseFormTitle" style="color:#8b5cf6; font-size:1.15rem;">➕ Create New Course / Topic</h4>
+              <button type="button" class="btn-close-modal" style="position:static;" onclick="app.closeCourseForm()">✕</button>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+              <div class="form-group">
+                <label for="courseInputTitle">Course Title (English):</label>
+                <input type="text" id="courseInputTitle" class="form-input" placeholder="e.g. Planets of our Solar System">
+              </div>
+              <div class="form-group">
+                <label for="courseInputHiTitle">Hindi Title / Subtitle:</label>
+                <input type="text" id="courseInputHiTitle" class="form-input" placeholder="e.g. हमारे सौरमंडल के ग्रह">
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-top:8px;">
+              <div class="form-group">
+                <label for="courseSelectSubject">Subject Category:</label>
+                <select id="courseSelectSubject" class="form-select">
+                  <option value="science" selected>🔬 Science & Space</option>
+                  <option value="morals">🌟 Good Habits & Manners</option>
+                  <option value="english">🔤 English & Vocabulary</option>
+                  <option value="hindi">🇮🇳 हिन्दी भाषा</option>
+                  <option value="maths">🔢 Mathematics</option>
+                  <option value="gk">🌍 General Knowledge</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="courseSelectGrade">Target Class / Level:</label>
+                <select id="courseSelectGrade" class="form-select">
+                  <option value="all" selected>All Champions (Nursery - Class 5)</option>
+                  <option value="nursery">Nursery / Preschool</option>
+                  <option value="primary">Class 1 to Class 5</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="courseInputIcon">Course Icon Emoji:</label>
+                <input type="text" id="courseInputIcon" class="form-input" placeholder="e.g. 🪐" value="📚">
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top:8px;">
+              <label for="courseInputDesc">Short Description:</label>
+              <input type="text" id="courseInputDesc" class="form-input" placeholder="e.g. Learn fascinating facts about planets, stars, and space exploration!">
+            </div>
+
+            <!-- Dynamic Topic Cards Section -->
+            <div style="margin-top:16px; border-top:2px dashed #cbd5e1; padding-top:14px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                <h4 style="color:#1e293b; font-size:1rem;">🃏 Topic Flashcards (<span id="courseCardCount">0</span> cards)</h4>
+                <button type="button" class="btn-step-go" style="background:#2563eb; padding:6px 12px; font-size:0.85rem;" onclick="app.addEmptyCardToBuilder()">
+                  ➕ Add Flashcard
+                </button>
+              </div>
+              <div id="courseCardsBuilderList" style="display:flex; flex-direction:column; gap:10px;"></div>
+            </div>
+
+            <input type="hidden" id="courseEditId" value="">
+
+            <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:16px;">
+              <button type="button" class="btn-step-go" style="background:#94a3b8;" onclick="app.closeCourseForm()">Cancel</button>
+              <button type="button" class="btn-step-go" style="background:#8b5cf6;" onclick="app.saveCourse()">💾 Save Course</button>
+            </div>
+          </div>
+
+          <!-- Courses List Grid -->
+          <div class="admin-items-list" id="adminCoursesList"></div>
+        </div>
+      </div>
+
+      <!-- Tab 4: Backup & Mobile Sync -->
+      <div class="admin-tab-content" id="adminContentBackup">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <h3>💾 Backup, Restore & Phone Sync</h3>
+            <p>Save all your custom courses and poems to a file, transfer them to your phone, or reset to defaults!</p>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px; margin-top:14px;">
+            <!-- Export JSON -->
+            <div class="backup-action-box" style="border:2px solid #93c5fd; background:#eff6ff;">
+              <span style="font-size:2.2rem;">📥</span>
+              <h4 style="color:#1e40af; margin:6px 0;">Export Backup File</h4>
+              <p style="font-size:0.85rem; color:#475569; margin-bottom:12px;">Download all your custom poems, topics, and voice settings as a <code>custom_content.json</code> file.</p>
+              <button type="button" class="btn-play" style="background:#2563eb; width:100%;" onclick="app.exportContentJson()">
+                Download Backup (JSON)
+              </button>
+            </div>
+
+            <!-- Import JSON -->
+            <div class="backup-action-box" style="border:2px solid #86efac; background:#f0fdf4;">
+              <span style="font-size:2.2rem;">📤</span>
+              <h4 style="color:#166534; margin:6px 0;">Import & Restore</h4>
+              <p style="font-size:0.85rem; color:#475569; margin-bottom:12px;">Load a backup file to restore your customized poems and courses onto any computer or phone.</p>
+              <input type="file" id="inputImportJsonFile" accept=".json" style="display:none;" onchange="app.importContentJson(event)">
+              <button type="button" class="btn-play" style="background:#16a34a; width:100%;" onclick="document.getElementById('inputImportJsonFile').click()">
+                Choose Backup File
+              </button>
+            </div>
+
+            <!-- Reset -->
+            <div class="backup-action-box" style="border:2px solid #fca5a5; background:#fef2f2;">
+              <span style="font-size:2.2rem;">🔄</span>
+              <h4 style="color:#991b1b; margin:6px 0;">Reset to Factory Defaults</h4>
+              <p style="font-size:0.85rem; color:#475569; margin-bottom:12px;">Clear custom items and restore the original 100% working starter curriculum.</p>
+              <button type="button" class="btn-play" style="background:#dc2626; width:100%;" onclick="app.resetCustomContent()">
+                Reset Content
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------
+         15. CUSTOM COURSE & TOPIC INTERACTIVE VIEWER
+         ---------------------------------------------------------- -->
+    <section class="screen" id="screenCustomCourseViewer">
+      <div class="sub-nav">
+        <button class="btn-back" type="button" onclick="app.showScreen('screenHome')">◀ Home</button>
+        <h2 class="sub-title" id="courseViewerTitle">🌟 Course Viewer</h2>
+      </div>
+
+      <div class="course-viewer-container">
+        <!-- Progress Bar & Grade Tag -->
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:8px;">
+          <span class="hub-badge" id="courseViewerSubjectBadge" style="background:#8b5cf6;">Science</span>
+          <span style="font-size:0.95rem; font-weight:800; color:#475569;" id="courseViewerStepIndicator">Card 1 of 5</span>
+        </div>
+
+        <!-- Big Interactive Flashcard -->
+        <div class="course-card-display" id="courseCardDisplay">
+          <div class="course-card-emoji" id="courseCardEmoji">☀️</div>
+          <h3 class="course-card-word" id="courseCardWord">The Sun</h3>
+          <p class="course-card-sub" id="courseCardSub">Center Star of Solar System</p>
+          <div class="course-card-sentence" id="courseCardSentence">
+            The Sun is a giant, glowing ball of fire that gives us warmth and life!
+          </div>
+
+          <div style="display:flex; justify-content:center; gap:12px; margin-top:18px;">
+            <button type="button" class="btn-nav btn-speak" id="btnSpeakCourseCard" onclick="app.speakCurrentCourseCard()">
+              🔊 Hear Narration
+            </button>
+            <button type="button" class="btn-nav" style="background:#f59e0b; color:#fff;" onclick="app.rewardCourseCard()">
+              ⭐ Collect Star (+2)
+            </button>
+          </div>
+        </div>
+
+        <!-- Previous / Next Navigation Controls -->
+        <div style="display:flex; justify-content:space-between; margin-top:18px; gap:12px;">
+          <button type="button" class="btn-step-go" style="background:#64748b; flex:1;" id="btnCoursePrev" onclick="app.prevCourseCard()">
+            ◀ Previous Card
+          </button>
+          <button type="button" class="btn-step-go" style="background:#2563eb; flex:1;" id="btnCourseNext" onclick="app.nextCourseCard()">
+            Next Card ▶
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       CELEBRATION MODAL OVERLAY (KID'S NAME + CONFETTI)
+       ============================================================ -->
+  <div class="celebration-overlay" id="celebrationOverlay">
+    <canvas id="confettiCanvas"></canvas>
+    <div class="celebration-modal">
+      <div class="trophy-emoji">🏆</div>
+      <h2 class="celebration-title">🎉 WOO-HOO! AMAZING JOB! 🎉</h2>
+      <div class="celebration-kid-name" id="celebrationKidName">Aarav</div>
+      <div class="celebration-class-badge" id="celebrationKidClass">Class 2 Superstar!</div>
+      <p class="celebration-msg" id="celebrationMsg">You solved the puzzle correctly! Super duper!</p>
+      
+      <div class="stars-reward-pill">
+        <span>⭐ +10 Stars! Total:</span>
+        <span id="celebrationTotalStars">10</span>
+      </div>
+
+      <button class="btn-celebrate-next" id="btnCelebrationNext" type="button">Next Challenge 🚀</button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       STARTUP / CHILD PROFILE ONBOARDING MODAL
+       ============================================================ -->
+  <div class="profile-modal-overlay" id="profileModal">
+    <div class="profile-card">
+      <button class="btn-close-modal" id="btnCloseProfileModal" type="button" title="Close">✕</button>
+      <span style="font-size:3rem;">🌟</span>
+      <h2>Welcome Little Champion!</h2>
+      <p>Tell us your name and class so we can cheer for you!</p>
+
+      <div class="avatar-picker">
+        <div class="avatar-option selected" data-avatar="🦁">🦁</div>
+        <div class="avatar-option" data-avatar="🚀">🚀</div>
+        <div class="avatar-option" data-avatar="🐱">🐱</div>
+        <div class="avatar-option" data-avatar="🦄">🦄</div>
+        <div class="avatar-option" data-avatar="🐼">🐼</div>
+        <div class="avatar-option" data-avatar="👑">👑</div>
+      </div>
+
+      <form id="formProfile">
+        <div class="form-group">
+          <label for="inputKidName">Child's Name:</label>
+          <input type="text" id="inputKidName" class="form-input" placeholder="e.g. Preeti, Harsh, Aarav, Ananya" autocomplete="off">
+        </div>
+
+        <div class="form-group">
+          <label for="selectKidClass">Class / Grade Level:</label>
+          <select id="selectKidClass" class="form-select">
+            <option value="Nursery / Preschool">Nursery / Preschool (Age 3)</option>
+            <option value="LKG / Lower KG">LKG / Junior KG (Age 4)</option>
+            <option value="UKG / Upper KG">UKG / Senior KG (Age 5)</option>
+            <option value="Class 1">Class 1</option>
+            <option value="Class 2" selected>Class 2</option>
+            <option value="Class 3">Class 3</option>
+            <option value="Class 4">Class 4</option>
+            <option value="Class 5">Class 5</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="selectVoicePref">Preferred Voice:</label>
+          <select id="selectVoicePref" class="form-select">
+            <option value="auto" selected>✨ Auto-detect by Name (Preeti ➔ Female, Harsh ➔ Male)</option>
+            <option value="female">👧 Female Voice (Friendly Teacher)</option>
+            <option value="male">👦 Male Voice (Friendly Mentor)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-start-game">Let's Play & Learn! 🚀</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PHONE QR CODE MODAL
+       ============================================================ -->
+  <div class="profile-modal-overlay" id="phoneModal">
+    <div class="profile-card" style="max-width:390px;">
+      <button class="btn-close-modal" id="btnClosePhoneModal" type="button" title="Close">✕</button>
+      <span style="font-size:3rem;">📱</span>
+      <h2>Play on Your Phone!</h2>
+      <p>Scan this QR code with your phone camera:</p>
+      <div style="background:#fff; padding:12px; border-radius:18px; display:inline-block; margin-bottom:12px; border:3px solid #e2e8f0;">
+        <img id="phoneQrImg" src="phone_qr.png" alt="Phone QR Code" style="width:200px; height:200px; display:block; border-radius:10px;">
+      </div>
+      <p style="font-size:0.85rem; color:#475569; margin-bottom:6px;">Or open this address on your phone:</p>
+      <div style="font-size:1.15rem; font-weight:800; color:#2563eb; background:#eff6ff; padding:10px 14px; border-radius:12px; margin-bottom:14px; word-break:break-all;" id="phoneUrlText">
+        http://192.168.1.110:8000
+      </div>
+      <p style="font-size:0.75rem; color:#64748b; margin-bottom:14px;">(Connect your phone to the same Wi-Fi network)</p>
+      <button class="btn-play" id="btnPhoneModalGotIt" type="button" style="background:#3b82f6;">Got it! 👍</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="audio.js"></script>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then((reg) => console.log('ServiceWorker registered:', reg.scope))
+          .catch((err) => console.log('ServiceWorker registration failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>
